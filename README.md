@@ -1,5 +1,5 @@
 # LUCKyHAT
-Is an OSINT (Open Source Intelligence) tool developed as an extension project at the Federal Institute of Southeast Minas - Juiz de Fora Campus. This web application is designed to facilitate the collection and analysis of publicly available information on the internet, offering advanced features such as:
+Is an OSINT (Open Source Intelligence) tool developed as an extension project at the Instituto Federal do Sudeste de Minas - Campus Juiz de Fora. This web application is designed to facilitate the collection and analysis of publicly available information on the internet, offering advanced features such as:
 
     DNS Lookup: Perform DNS queries to obtain detailed information about domains.
     IP Analysis: Identify and analyze IP addresses to understand their characteristics and origins.
