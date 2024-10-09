@@ -1,2 +1,10 @@
 # LUCKyHAT
-LUCKyHAT is an OSINT tool developed as a project at the Instituto Federal do Sudeste de Minas - Campus Juiz de Fora. This web application enables the collection and analysis of public information, offering features like DNS lookup, IP analysis, and port scanning to support students and professionals in information security.
+Is an OSINT (Open Source Intelligence) tool developed as an extension project at the Federal Institute of Southeast Minas - Juiz de Fora Campus. This web application is designed to facilitate the collection and analysis of publicly available information on the internet, offering advanced features such as:
+
+    DNS Lookup: Perform DNS queries to obtain detailed information about domains.
+    IP Analysis: Identify and analyze IP addresses to understand their characteristics and origins.
+    Port Scanning: Check open ports on servers, aiding in security assessment.
+
+With an intuitive and user-friendly web interface, LUCKyHAT is aimed at students, researchers, and professionals looking to enhance their skills in investigation and information security. The tool not only promotes learning but also encourages the exploration of ethical practices in open-source intelligence.
+
+Explore the repository to learn more and start using LUCKyHAT in your projects!
