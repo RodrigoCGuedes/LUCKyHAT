@@ -1,0 +1,22 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+
+<ol>
+    {% if topics is defined and topics|length > 0 %}
+    {% for title, topicsList in topics %}
+    <li><a href="/introduction/{{ title }}">{{ title }}</a>
+        <ul>
+            {% for topic in topicsList %}
+            <li>
+                <a href="/introduction/{{ title }}/{{ topic }}">{{ topic }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <br>
+    </li>
+    {% endfor %}
+    {% endif %}
+</ol>
+
+{% endblock %}

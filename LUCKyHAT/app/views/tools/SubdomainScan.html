@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form action="/tools/SubdomainScan" method="POST">
+    <label for="domain">Domain:</label>
+    <input type="text" id="domain" name="domain" autofocus>
+    <button type="submit">ToSend</button>
+    <h2><a href="/introduction/DomainReconnaissance/SubdomainScan">?</a></h2>
+</form>
+
+<div id="main_content">
+    <ol>
+        {% for url in urls %}
+
+        <li>{{ url }}</li>
+
+        {% endfor %}
+    </ol>
+
+    {% if urls is defined and urls is not empty %}
+    <form action="/tools/GetIP" method="POST">
+        {% for url in urls %}
+        <input type="hidden" name="urls[]" value="{{ url }}">
+        {% endfor %}
+        <button type="submit">GetIP's</button>
+    </form>
+    <hr>
+    <div class="Buttons_Container">
+        <form action="/tools/WhoIs" method="POST">
+            {% for url in urls %}
+            <input type="hidden" name="domains[]" value="{{ url }}">
+            {% endfor %}
+            <button type="submit">WhoIs</button>
+        </form>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form action="/tools/UdpPortScan" method="POST">
+    <label for="ips[]">IP:</label>
+    <input type="text" id="ips[]" name="ips[]" autofocus>
+    <button type="submit">ToSend</button>
+    <h2><a href="/introduction/PortScanning/UdpPortScan">?</a></h2>
+</form>
+
+<div id="main_content">
+    <ol>
+        {% if ports is defined and ports|length > 0 %}
+        {% for i in 0..(ips|length - 1) %}
+
+        <li>
+            {{ urls[i] }} - {{ ips[i] }}
+            <ul>
+                {% for j in 0..(ports[ips[i]]|length - 1) %}
+                <li>{{ ports[ips[i]][j] }}</li>
+                {% endfor %}
+            </ul>
+            <br>
+        </li>
+
+        {% endfor %}
+        {% endif %}
+    </ol>
+</div>
+
+{% endblock %}

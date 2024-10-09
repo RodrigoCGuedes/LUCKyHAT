@@ -1,0 +1,12 @@
+{
+    "autoload": {
+        "psr-4": {
+            "app\\" : "app",
+            "core\\" : "core"
+        }
+    },
+    "require": {
+        "twig/twig": "^3.11",
+        "io-developer/php-whois": "^4.1"
+    }
+}

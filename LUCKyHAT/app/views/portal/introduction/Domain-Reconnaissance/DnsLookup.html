@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<a href="/tools/DnsLookup"><strong>➤ See the tool</strong></a>
+
+<p>DNS Lookup is a fundamental technique in OSINT (Open Source Intelligence) and network reconnaissance, focused on retrieving DNS (Domain Name System) records associated with a target domain. These records provide critical insights into the domain's configuration, including how traffic is routed and what services are linked to the domain.</p>
+
+<p>The primary objectives of DNS Lookup include:</p>
+<ul>
+    <li><strong>Resolving Domain Names:</strong> Translating domain names into their corresponding IP addresses, providing insight into the domain's hosting and network infrastructure.</li>
+    <li><strong>Extracting DNS Records:</strong> Gathering important DNS record types such as A, MX, NS, CNAME, and TXT, which reveal how a domain handles email, web services, and other network functionalities.</li>
+    <li><strong>Identifying Infrastructure:</strong> Understanding the infrastructure behind a domain by analyzing the DNS records, potentially uncovering hidden services or misconfigurations.</li>
+    <li><strong>Tracking Ownership:</strong> Reviewing WHOIS information linked to the domain to gather data on ownership, registration, and expiration details.</li>
+</ul>
+
+<p>An effective DNS Lookup is crucial for mapping out a domain's structure and understanding its underlying services. The information gathered can assist in identifying vulnerabilities, misconfigurations, or other weaknesses within the domain's setup.</p>
+
+<p>Our DNS Lookup tool simplifies the process of retrieving DNS records, offering fast and detailed results to enhance your reconnaissance efforts. The results are displayed clearly, making it easy to analyze and utilize the information effectively.</p>
+
+{% endblock %}

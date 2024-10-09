@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form action="/tools/WhoIs" method="POST">
+    <label for="domains[]">Domain:</label>
+    <input type="text" id="domains[]" name="domains[]" autofocus>
+    <button type="submit">ToSend</button>
+    <h2><a href="/introduction/DomainReconnaissance/WhoIs">?</a></h2>
+</form>
+
+<div id="main_content">
+    <ol>
+        {% if results is defined and results|length > 0 %}
+        {% for domain, infos in results %}
+        <li>
+            <strong>{{ domain }}</strong>
+            <ul>
+                {% for key, value in infos %}
+                <li> <strong>{{ key }}</strong>: {{ value }} </li>
+                {% endfor %}
+            </ul>
+            <br>
+        </li>
+        {% endfor %}
+        {% endif %}
+    </ol>
+</div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<a href="/tools"><strong>➤ See the tools</strong></a>
+
+<p>Domain Reconnaissance is a critical phase in the OSINT (Open Source Intelligence) process, where the goal is to
+    gather as much information as possible about a target domain. This stage typically involves the identification of
+    subdomains, IP addresses, DNS records, and other relevant data associated with the domain.</p>
+
+<p>The primary objectives of Domain Reconnaissance include:</p>
+<ul>
+    <li><strong>Subdomain Enumeration:</strong> Discovering subdomains that belong to the main domain, which could
+        reveal additional services or entry points.</li>
+    <li><strong>IP Address Mapping:</strong> Identifying the IP addresses linked to the domain and its subdomains,
+        aiding in the understanding of the network infrastructure.</li>
+    <li><strong>DNS Record Analysis:</strong> Extracting DNS records, such as A, MX, TXT, and CNAME, to understand how
+        the domain's traffic is routed and what services are associated with it.</li>
+    <li><strong>Gathering Metadata:</strong> Collecting metadata from various sources, including WHOIS data, to identify
+        the domain's owner, registration details, and other potentially sensitive information.</li>
+</ul>
+
+<p>Effective Domain Reconnaissance can uncover vulnerabilities, misconfigurations, and other weaknesses that could be
+    exploited in further stages of a security assessment or penetration test. This information is essential for building
+    a comprehensive understanding of the target's digital footprint.</p>
+
+<p>Our tool provides automated capabilities for Domain Reconnaissance, allowing for efficient and thorough data
+    collection. The results are presented in a user-friendly format, enabling users to quickly identify critical
+    insights and take appropriate action.</p>
+{% endblock %}
