@@ -1,0 +1,9 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+    <ol>
+        {% for page in pages %}
+                <li><a href="/{{ page }}">{{ page }}</a></li>
+        {% endfor %}
+    </ol>
+{% endblock %}

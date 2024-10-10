@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form action="/tools/GeoLocalization" method="POST">
+    <label for="ips[]">IP:</label>
+    <input type="text" id="ips[]" name="ips[]" autofocus>
+    <button type="submit"">ToSend</button>
+    <h2><a href="/introduction/IpAndLocationAnalysis/GeoLocalization">?</a></h2>
+    </form>
+
+    <div id=" main_content">
+        <ol>
+            {% if results is defined and results|length > 0 %}
+            {% for i in 0..(ips|length - 1) %}
+
+            <li>
+                <strong>{{ ips[i] }} - {{ urls[i] }}</strong>
+                <ul>
+                    <li>Hostname: {{ results[ips[i]]['hostname'] }}</li>
+                    <li>City: {{ results[ips[i]]['city'] }}</li>
+                    <li>Region: {{ results[ips[i]]['region'] }}</li>
+                    <li>Country: {{ results[ips[i]]['country'] }}</li>
+                    <li>Location: {{ results[ips[i]]['loc'] }}</li>
+                    <li>Organization: {{ results[ips[i]]['org'] }}</li>
+                    <li>Postal Code: {{ results[ips[i]]['postal'] }}</li>
+                    <li>Timezone: {{ results[ips[i]]['timezone'] }}</li>
+                </ul>
+                <br>
+            </li>
+
+            {% endfor %}
+            {% endif %}
+        </ol>
+    </div>
+        {% endblock %}

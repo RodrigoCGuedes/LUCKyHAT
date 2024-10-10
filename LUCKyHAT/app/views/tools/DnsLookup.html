@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form action="/tools/DnsLookup" method="POST">
+    <label for="Host">Host:</label>
+    <input type="text" id="Host" name="Host" autofocus>
+    <button type="submit">ToSend</button>
+    <h2><a href="/introduction/DomainReconnaissance/SubdomainScan">?</a></h2>
+</form>
+
+<div id="main_content">
+    <ul>
+        {% if results is defined and results is not empty %}
+        {% for index, value in results %}
+        {% if value is iterable %}
+        <li><strong>{{ index }}:</strong></li>
+        <ul>
+            {% for key, sub_value in value %}
+            {% if sub_value is iterable %}
+            <li><strong>{{ key }}:</strong></li>
+            <ul>
+                {% for sub_key, result in sub_value %}
+                {% if result is iterable %}
+                <li><strong>{{ sub_key }}:</strong></li>
+                <ul>
+                    {% for final_key, final_value in result %}
+                    <li><strong>{{ final_key }}:</strong> {{ final_value }}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <li><strong>{{ sub_key }}:</strong> {{ result }}</li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            {% else %}
+            <li><strong>{{ key }}:</strong> {{ sub_value }}</li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        {% else %}
+        <li><strong>{{ index }}:</strong> {{ value }}</li>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </ul>
+</div>
+
+{% endblock %}

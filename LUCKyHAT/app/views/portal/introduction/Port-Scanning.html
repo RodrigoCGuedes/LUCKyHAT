@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<a href="/tools"><strong>➤ See the tools</strong></a>
+
+<p>Port Scanning is a fundamental technique in network security assessments, used to identify open ports and the
+    services running on them within a target system. This process is a key step in the OSINT (Open Source Intelligence)
+    and penetration testing phases, allowing analysts to map the attack surface of a network.</p>
+
+<p>The main objectives of Port Scanning include:</p>
+<ul>
+    <li><strong>Identifying Open Ports:</strong> Detecting which ports on a target system are open and accessible. Open
+        ports can represent potential entry points for attackers if they are running vulnerable services.</li>
+    <li><strong>Service Detection:</strong> Determining the type of service and its version running on the open ports.
+        This information is crucial for identifying known vulnerabilities associated with specific services.</li>
+    <li><strong>Network Topology Mapping:</strong> Understanding the layout and configuration of the network by
+        analyzing the ports and services exposed to the internet or within an internal network.</li>
+    <li><strong>Assessing Security Posture:</strong> Evaluating the security measures in place by identifying potential
+        weaknesses, such as unnecessary open ports or outdated services that could be exploited.</li>
+</ul>
+
+<p>Port Scanning is essential for discovering vulnerabilities that could be exploited by attackers. By identifying open
+    ports and the services behind them, security professionals can assess the risk level and take necessary actions to
+    secure the network.</p>
+
+<p>Our tool automates the process of Port Scanning, providing comprehensive results that include detailed information
+    about open ports, running services, and potential vulnerabilities. These insights are crucial for proactive network
+    defense and enhancing the overall security posture.</p>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+
+<div id="main_content">
+    <ol>
+        {% if tools is defined and tools|length > 0 %}
+        {% for title, toolList in tools %}
+        <li><a href="/introduction/{{ title }}">{{ title }}</a>
+            <ul>
+                {% for tool in toolList %}
+                <li>
+                    <a href="/tools/{{ tool }}">{{ tool }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            <br>
+        </li>
+        {% endfor %}
+        {% endif %}
+    </ol>
+</div>
+
+{% endblock %}
